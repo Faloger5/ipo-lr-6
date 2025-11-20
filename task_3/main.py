@@ -1,17 +1,18 @@
-import string
-
-stroki = int(input('Введите кол-во строк: '))
-if stroki <= 0:
-    print('Вы ввели некорректное значение')
+# Доброва Анна
+import string # импортируем модуль string
+stroki = int(input('Введите кол-во строк: '))  # вводим количество строк
+if stroki <= 0:  # проверяем корректность числа
+    print('Вы ввели некорректное значение')  # сообщение об ошибке
 else:
-    texts = []
-    for i in range(stroki):
-        user_input = input(f'Введите {i+1}-ю строку: ')
-        texts.append(user_input)
+    texts = []  # список для хранения строк
+    for i in range(stroki):  # цикл по количеству строк
+        user_input = input(f'Введите {i+1}-ю строку: ')  # ввод строки
+        texts.append(user_input)  # добавляем строку в список
 
-    total_words = 0
-    for line in texts:
-        words = line.split()  # разбиваем строку на слова
-        total_words += len(words)
+    total_words = 0  # общий счётчик слов
+    for line in texts:  # перебираем каждую строку
+        words = line.split()  # делим строку на слова по пробелам
+        total_words += len(words)  # увеличиваем счётчик на количество слов
 
-    print('Кол-во слов в тексте:', total_words)
+    print('Кол-во слов в тексте:', total_words)  # выводим результат
+
